@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/**
+ * 公用CSS
+ */
+
+/*倒三角*/
+.triangle-down {
+    border-width: 6px;
+    border-color: #666 transparent transparent;
+    border-style: solid dashed dashed;
+    width: 0;
+    height: 0;
+}
+
+/*倒三角实线*/
+.triangle-down-solid::before, .triangle-down-solid::after {
+    content: " "; /*伪元素必须加content，否则不显示*/
+    position: absolute;
+    border-width: 6px;
+    border-color: transparent transparent #e0e0e0;
+    border-style: dashed dashed solid;
+
+    width: 0;
+    height: 0;
+
+    left: 50%;
+    top: -12px;
+}
+
+.triangle-down-solid::after{
+    border-color: transparent transparent #fff;
+    top: -10px;
+}
+/*闭合浮动*/
+.clear-fix::before, .clear-fix::after {
+    content: " ";
+    display: table;
+}
+
+.clear-fix::after {
+    clear: both;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}

@@ -1,1 +1,354 @@
 @charset "UTF-8";
+
+body {
+    font-size: 12px;
+    color: #808080;
+}
+
+a {
+    color: #808080;
+}
+
+.header {
+    width: 100%;
+}
+
+/*顶部导航*/
+.header > .top-nav {
+    width: 1190px;
+    height: 74px;
+    padding-top: 24px;
+    margin: 0 auto;
+    /*border: 1px solid silver;*/
+}
+
+/*左侧loge*/
+.top-nav > .logo {
+    float: left;
+}
+
+.top-nav > .logo > h1 {
+    position: absolute;
+    text-indent: -9999px;
+}
+
+/*搜索框*/
+.top-nav > .search {
+    /*放大镜绝对定位，父容器应相对定位*/
+    position: relative;
+    margin: 0 300px 0 360px;
+    padding-top: 12px;
+}
+
+.top-nav > .search > .course-sel {
+    /*display: inline-block;*/
+    /*浮动可以解决间隙和垂直对不齐问题*/
+    float: left;
+    position: relative;
+    width: 68px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+.top-nav .course-menu {
+    /*绝对定位不影响其他布局*/
+    position: absolute;
+    display: none;
+    top: 34px;
+    left: -1px;
+}
+
+/*课程教材选择层弹出*/
+.top-nav .course-menu li {
+    width: 68px;
+    border: 1px solid #e0e0e0;
+    border-top-width: 0;
+    background: #ffffff;
+}
+
+/*鼠标移动上去弹出*/
+.top-nav .course-sel:hover .course-menu {
+    display: block;
+}
+
+.top-nav .course-menu li:hover {
+    background: #ccc;
+}
+
+.top-nav > .search input {
+    /*display: inline-block;*/
+    /*浮动可以解决间隙和垂直对不齐问题*/
+    float: left;
+    width: 404px;
+    height: 34px;
+    line-height: 34px;
+    padding-left: 2em;
+    border: 1px solid #e0e0e0;
+    border-left: 0;
+}
+
+.top-nav > .search .icon-sel {
+    float: right;
+    margin: 14px 10px 0 0;
+}
+
+/*放大镜*/
+.top-nav > .search > .icon-search {
+    /*绝对定位*/
+    position: absolute;
+    top: 18px;
+    display: inline-block;
+    width: 29px;
+    right: 35px;
+    height: 23px;
+    background: url("../img/search.gif") no-repeat;
+}
+
+/*用户导航区*/
+.top-nav > .user {
+    float: right;
+    padding-top: 8px;
+}
+
+.top-nav .user .user-nav-li {
+    float: left;
+    position: relative;
+    height: 42px;
+    line-height: 42px;
+    margin: 0 12px 0 12px;
+}
+
+.top-nav .user .msg {
+    display: inline-block;
+    width: 38px;
+    height: 34px;
+    margin-top: 6px;
+    background: url("../img/sprite-msg.png") no-repeat;
+}
+
+.top-nav .user .msg-num {
+    display: inline-block;
+    float: right;
+
+    width: 20px;
+    height: 20px;
+    line-height: 18px;
+    padding-left: 3px;
+    color: #fff;
+    background: url("../img/sprite-msg.png") no-repeat left -40px;
+}
+
+.top-nav .user .icon {
+    float: right;
+    margin-top: 18px;
+    margin-left: 4px;
+}
+
+.top-nav .user .avatar {
+    width: 42px;
+    height: 42px;
+}
+
+/*用户菜单*/
+.top-nav .user .user-menu {
+    position: absolute;
+    display: none;
+    left: 10px;
+    top: 40px;
+    background: #fff;
+}
+
+.top-nav .user-menu a {
+    display: inline-block;
+    border: 1px solid #e0e0e0;
+    width: 125px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+/*用户菜单弹出*/
+.user-pop-menu:hover .user-menu {
+    display: block;
+}
+
+.top-nav .user-menu a:hover {
+    background-color: #e0e0e0;
+}
+
+/*=====================================================================*/
+/*网站主导航*/
+
+.header .site-nav {
+    background: #3598db;
+    height: 60px;
+}
+
+.header .site-nav-wrap {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+.site-nav li {
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.site-nav li a {
+    color: #fff;
+}
+
+.header .site-nav .main-nav-ul {
+    float: left;
+}
+
+.site-nav .main-nav-ul .main-nav-li {
+    float: left;
+    margin-right: 15px;
+
+}
+
+.site-nav a {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 22px;
+    border-radius: 3px;
+}
+
+.main-nav-ul .main-nav-home a {
+    background-color: #2db0f9;
+}
+
+.main-nav-ul .main-nav-li a:hover {
+    background-color: #2db0f9;
+}
+
+.header .site-nav .aside-nav-ul {
+    float: right;
+    background-color: #e7594d;
+}
+
+.site-nav .aside-nav-ul .aside-nav-li {
+    float: left;
+}
+
+/*右边红色背景*/
+.site-nav .bg-red-parent {
+    /*子绝父相*/
+    position: relative;
+    margin-left: 1190px;
+}
+
+.site-nav .bg-red-parent .bg-red-child {
+    /*做一个绝对定位，以免影响其他布局*/
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 60px;
+    background-color: #e7594d;
+}
+
+/*=====================================================================*/
+/*banner区域*/
+.banner {
+    position: relative;
+    height: 408px;
+    background-color: #61caff;
+    overflow: hidden;
+    min-width: 1190px;
+}
+
+.banner .img-banner {
+    width: 100%;
+    /*height: 408px;*/
+}
+
+/*banner底部圆点*/
+.banner .slide-bar-wrap {
+    /*绝对定位来居中对齐且不影响其他布局*/
+    position: absolute;
+    left: 50%;
+    /*top: 370px;*/
+    bottom: 16px;
+    margin-left: -54px;
+    z-index: 500;
+    width: 90px;
+    height: 15px;
+}
+
+.banner .slide-bar-li a {
+    float: left;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 0 7px;
+    background: url("../img/ico_circle.png") no-repeat -70px 0;
+}
+
+.banner .slide-bar-cur a {
+    background: url("../img/ico_circle.png") no-repeat -56px -23px;
+}
+
+.banner .slide-bar-li a:hover {
+    background: url("../img/ico_circle.png") no-repeat -56px -23px;
+}
+
+/*==产品区域==================================================================*/
+/*版心盒子*/
+.product-center-wrap {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+/*产品头部*/
+.product-course-head {
+    padding-top: 40px;
+}
+
+.product-course-head h3 {
+    float: left;
+    line-height: 20px;
+    font-size: 20px;
+    color: #1a1a1a;
+    padding-left: 9px;
+    border-left: 5px solid #2db0f9;
+}
+
+.product-course-head a {
+    float: right;
+    font-size: 9px;
+    color: #3598db;
+}
+
+/*产品内容*/
+.product-course-body .product-body-li {
+    float: left;
+    margin: 30px 14px 0 14px;
+    width: 208px;
+    color: #1a1a1a;
+}
+
+.product-course-body .product-body-li img {
+    width: 208px;
+    height: 181px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+/*==网站底部==================================================================*/
+.footer {
+    min-width: 1190px;
+    min-height: 100px;
+    margin-top: 80px;
+    background-color: #373a43;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    padding-top: 40px;
+}
